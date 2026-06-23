@@ -132,7 +132,7 @@ const FAQs = () => {
                 Contact us
               </a>
               <a
-                href={`mailto:${siteConfig.brand.email.support}`}
+                href={`mailto:${siteConfig.brand.email.general}`}
                 className="inline-flex items-center justify-center rounded-full border-2 border-[var(--color-primary)] px-6 py-2.5 text-sm font-medium text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"
               >
                 Email support

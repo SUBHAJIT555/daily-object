@@ -145,10 +145,12 @@ const Header = () => {
           <div className="xl:w-auto flex-col sm:flex-row w-full flex sm:justify-between sm:items-center gap-5 sm:gap-10">
             <Link className="flex-shrink-0" href="/">
               <Image
-                src="/images/logo/logo.svg"
-                alt="Logo"
-                width={219}
-                height={36}
+                src="/images/logo/logo.png"
+                alt="Daily Object"
+                width={152}
+                height={135}
+                className="h-10 sm:h-12 w-auto"
+                priority
               />
             </Link>
 

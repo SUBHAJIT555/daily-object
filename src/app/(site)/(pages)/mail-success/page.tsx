@@ -1,12 +1,11 @@
 import React from "react";
 import MailSuccess from "@/components/MailSuccess";
+import { pageMetadata } from "@/lib/pageMetadata";
 
-import { Metadata } from "next";
-export const metadata: Metadata = {
-  title: "Message Sent | Daily Object",
-  description: "Your message was sent successfully.",
-  // other metadata
-};
+export const metadata = pageMetadata(
+  "Message Sent | Daily Object",
+  "Your message was sent successfully."
+);
 
 const MailSuccessPage = () => {
   return (

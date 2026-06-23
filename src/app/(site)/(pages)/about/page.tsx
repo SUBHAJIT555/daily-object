@@ -1,11 +1,10 @@
 import About from "@/components/About";
+import { pageMetadata } from "@/lib/pageMetadata";
 
-import { Metadata } from "next";
-export const metadata: Metadata = {
-  title: "About Us | Daily Object",
-  description: "Learn about Daily Object — curated everyday essentials and our story.",
-  // other metadata
-};
+export const metadata = pageMetadata(
+  "About Us | Daily Object",
+  "Learn about Daily Object — curated everyday essentials and our story."
+);
 
 const AboutPage = () => {
   return (

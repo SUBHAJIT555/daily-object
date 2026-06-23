@@ -1,11 +1,10 @@
 import RefundPolicy from "@/components/RefundPolicy";
+import { pageMetadata } from "@/lib/pageMetadata";
 
-import { Metadata } from "next";
-export const metadata: Metadata = {
-  title: "Refund Policy | Daily Object",
-  description: "Refund Policy for Daily Object.",
-  // other metadata
-};
+export const metadata = pageMetadata(
+  "Refund Policy | Daily Object",
+  "Refund Policy for Daily Object."
+);
 
 const RefundPolicyPage = () => {
   return (

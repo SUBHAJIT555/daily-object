@@ -1,11 +1,14 @@
 export const siteConfig = {
   brand: {
     name: "Daily Object",
+    domain: "daily-object.com",
+    url: "https://daily-object.com",
+    tagline: "Everyday essentials, just for you",
     email: {
-      support: "support@daily-object.com",
-      privacy: "privacy@daily-object.com",
-      legal: "legal@daily-object.com",
       general: "info@daily-object.com",
+      support: "info@daily-object.com",
+      privacy: "info@daily-object.com",
+      legal: "info@daily-object.com",
     },
     phone: "+91 9876543210",
     address: {

@@ -3,12 +3,12 @@ import ShopWithoutSidebar from "@/components/ShopWithoutSidebar";
 import { getSiteNumber } from "@/lib/siteConfig";
 import { selectProducts } from "@/lib/productSelector";
 
-import { Metadata } from "next";
-export const metadata: Metadata = {
-  title: "Shop | Daily Object",
-  description: "Shop everyday essentials at Daily Object.",
-  // other metadata
-};
+import { pageMetadata } from "@/lib/pageMetadata";
+
+export const metadata = pageMetadata(
+  "Shop | Daily Object",
+  "Shop everyday essentials at Daily Object."
+);
 
 const ShopWithoutSidebarPage = () => {
   const siteNumber = getSiteNumber();

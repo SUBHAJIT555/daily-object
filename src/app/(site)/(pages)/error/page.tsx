@@ -1,12 +1,11 @@
 import React from "react";
 import Error from "@/components/Error";
+import { pageMetadata } from "@/lib/pageMetadata";
 
-import { Metadata } from "next";
-export const metadata: Metadata = {
-  title: "Error | Daily Object",
-  description: "Something went wrong.",
-  // other metadata
-};
+export const metadata = pageMetadata(
+  "Error | Daily Object",
+  "Something went wrong."
+);
 
 const ErrorPage = () => {
   return (

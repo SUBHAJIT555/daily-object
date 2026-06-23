@@ -1,12 +1,11 @@
 import React from "react";
 import { Wishlist } from "@/components/Wishlist";
-import { Metadata } from "next";
+import { pageMetadata } from "@/lib/pageMetadata";
 
-export const metadata: Metadata = {
-  title: "Wishlist | Daily Object",
-  description: "Your wishlist at Daily Object.",
-  // other metadata
-};
+export const metadata = pageMetadata(
+  "Wishlist | Daily Object",
+  "Your wishlist at Daily Object."
+);
 
 const WishlistPage = () => {
   return (

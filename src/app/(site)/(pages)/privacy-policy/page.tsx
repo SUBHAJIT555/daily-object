@@ -1,11 +1,10 @@
 import PrivacyPolicy from "@/components/PrivacyPolicy";
+import { pageMetadata } from "@/lib/pageMetadata";
 
-import { Metadata } from "next";
-export const metadata: Metadata = {
-  title: "Privacy Policy | Daily Object",
-  description: "Privacy Policy for Daily Object.",
-  // other metadata
-};
+export const metadata = pageMetadata(
+  "Privacy Policy | Daily Object",
+  "Privacy Policy for Daily Object."
+);
 
 const PrivacyPolicyPage = () => {
   return (

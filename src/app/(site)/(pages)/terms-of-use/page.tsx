@@ -1,11 +1,10 @@
 import TermsOfUse from "@/components/TermsOfUse";
+import { pageMetadata } from "@/lib/pageMetadata";
 
-import { Metadata } from "next";
-export const metadata: Metadata = {
-  title: "Terms of Use | Daily Object",
-  description: "Terms of Use for Daily Object.",
-  // other metadata
-};
+export const metadata = pageMetadata(
+  "Terms of Use | Daily Object",
+  "Terms of Use for Daily Object."
+);
 
 const TermsOfUsePage = () => {
   return (

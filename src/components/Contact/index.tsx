@@ -86,7 +86,9 @@ const Contact = () => {
                         fill="var(--color-primary)"
                       />
                     </svg>
-                    Name: James Septimus
+                    <a href={`mailto:${siteConfig.brand.email.general}`} className="hover:text-white">
+                      Email: {siteConfig.brand.email.general}
+                    </a>
                   </p>
 
                   <p className="flex items-start gap-3 text-gray-300">

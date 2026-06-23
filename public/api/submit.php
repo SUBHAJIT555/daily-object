@@ -131,14 +131,14 @@ $smtpPass = $_ENV['SMTP_PASS'];
 $smtpPort = $_ENV['SMTP_PORT'];
 $smtpSecure = $_ENV['SMTP_SECURE'];
 
-$toAddresses = [['aditya@baharnani.com', 'Aditya Baharnani']];
+$toAddresses = [['info@daily-object.com', 'Daily Object']];
 $fromEmail = $smtpUser;
-$fromName  = 'Snap Gears Website';
+$fromName  = 'Daily Object';
 
 // --- Brand styling ---
-$brandName = 'Supreme Cart';
-$tagline   = 'Where Innovation Meets Excellence.';
-$brandColor = '#0a2540';
+$brandName = 'Daily Object';
+$tagline   = 'Everyday essentials, just for you.';
+$brandColor = '#001530';
 $muted = '#6b7280';
 $bg = '#f9fafb';
 $cardBg = '#ffffff';

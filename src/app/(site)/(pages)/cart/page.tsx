@@ -1,12 +1,11 @@
 import React from "react";
 import Cart from "@/components/Cart";
+import { pageMetadata } from "@/lib/pageMetadata";
 
-import { Metadata } from "next";
-export const metadata: Metadata = {
-  title: "Cart | Daily Object",
-  description: "Your shopping cart at Daily Object.",
-  // other metadata
-};
+export const metadata = pageMetadata(
+  "Cart | Daily Object",
+  "Your shopping cart at Daily Object."
+);
 
 const CartPage = () => {
   return (

@@ -1,12 +1,11 @@
 import React from "react";
 import Checkout from "@/components/Checkout";
+import { pageMetadata } from "@/lib/pageMetadata";
 
-import { Metadata } from "next";
-export const metadata: Metadata = {
-  title: "Checkout | Daily Object",
-  description: "Complete your order at Daily Object.",
-  // other metadata
-};
+export const metadata = pageMetadata(
+  "Checkout | Daily Object",
+  "Complete your order at Daily Object."
+);
 
 const CheckoutPage = () => {
   return (
