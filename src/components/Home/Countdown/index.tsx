@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const CounDown = () => {
   const [days, setDays] = useState(0);
@@ -8,7 +9,7 @@ const CounDown = () => {
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
 
-  const deadline = "December, 31, 2024";
+  const deadline = "December, 31, 2026";
 
   const getTime = () => {
     const time = Date.parse(deadline) - Date.now();
@@ -103,12 +104,12 @@ const CounDown = () => {
             </div>
             {/* <!-- Countdown timer ends --> */}
 
-            <a
-              href="#"
+            <Link
+              href="/shop"
               className="inline-flex font-medium text-custom-sm text-white bg-blue py-3 px-9.5 rounded-md ease-out duration-200 hover:bg-blue-dark mt-7.5"
             >
               Check it Out!
-            </a>
+            </Link>
           </div>
 
           {/* <!-- bg shapes --> */}

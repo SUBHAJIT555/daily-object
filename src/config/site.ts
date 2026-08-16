@@ -1,4 +1,5 @@
 export const siteConfig = {
+  url: "https://daily-object.com",
   brand: {
     name: "Daily Object",
     domain: "daily-object.com",
@@ -10,15 +11,32 @@ export const siteConfig = {
       privacy: "info@daily-object.com",
       legal: "info@daily-object.com",
     },
-    phone: "+91 9876543210",
+    phone: "+91 98765 43210",
     address: {
-      street: "4517 Washington Ave.",
-      city: "Manchester",
-      state: "Kentucky",
-      zip: "39495",
-      full: "4517 Washington Ave., Manchester, Kentucky 39495",
-      location: "711-2880 Nulla St.",
+      street: "12, MG Road",
+      city: "Bengaluru",
+      state: "Karnataka",
+      zip: "560001",
+      full: "12, MG Road, Bengaluru, Karnataka 560001, India",
+      location: "Bengaluru, Karnataka, India",
     },
     businessHours: "Mon - Sat: 10 AM - 6 PM",
+  },
+  seo: {
+    defaultTitle:
+      "Daily Object | Online Shopping for Electronics, Books, Stationery & Garments",
+    titleTemplate: "%s | Daily Object",
+    defaultDescription:
+      "Daily Object is India's trusted online store for electronics, books, stationery, and garments. Honest prices, fast delivery across India, and support made for Indian shoppers.",
+    keywords: [
+      "Daily Object",
+      "daily-object",
+      "online shopping India",
+      "electronics",
+      "books",
+      "stationery",
+      "garments",
+      "e-commerce India",
+    ],
   },
 } as const;

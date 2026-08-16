@@ -55,6 +55,7 @@ const Checkout = () => {
       formData.append("cart_total", total.toString());
       formData.append("order_total", total.toString());
       if (data.notes) formData.append("notes", data.notes);
+      if (data.postcode) formData.append("postcode", data.postcode);
 
       const res = await fetch("/api/submit.php", {
         method: "POST",

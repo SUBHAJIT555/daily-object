@@ -11,7 +11,7 @@ import { selectTotalPrice } from "@/redux/features/cart-slice";
 import { useCartModalContext } from "@/app/context/CartSidebarModalContext";
 import Image from "next/image";
 import categoryData from "@/constants/categoryData";
-import { Product } from "@/types/product";
+import { selectProducts } from "@/lib/productSelector";
 
 const Header = () => {
   const router = useRouter();
@@ -26,22 +26,18 @@ const Header = () => {
   const product = useAppSelector((state) => state.cartReducer.items);
   const totalPrice = useSelector(selectTotalPrice);
 
-  // Get the 150 selected products for this site
-  const [products, setProducts] = useState<Product[]>([]);
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await fetch('/api/products');
-        if (response.ok) {
-          const data = await response.json();
-          setProducts(data);
-        }
-      } catch (error) {
-        console.error("Error fetching products:", error);
+  const products = useMemo(() => {
+    try {
+      const siteNumberEnv = process.env.NEXT_PUBLIC_SITE_NUMBER;
+      const siteNumber = siteNumberEnv ? parseInt(siteNumberEnv, 10) : 1;
+      if (isNaN(siteNumber) || siteNumber < 1 || siteNumber > 40) {
+        return selectProducts(1);
       }
-    };
-    fetchProducts();
+      return selectProducts(siteNumber);
+    } catch (error) {
+      console.error("Error selecting products:", error);
+      return selectProducts(1);
+    }
   }, []);
 
   const handleOpenCartModal = () => {
